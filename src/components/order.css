@@ -1,5 +1,6 @@
+
 header{
-    background-color: #CE2829;
+   
     background-size: cover;
     margin-top:0;
     display:flex;
@@ -16,9 +17,12 @@ color: white;
 .header-container{
 display: flex;
 flex-direction: column;
+max-width: 100%;
+align-items: center;
+background-color: #CE2829;
 }
 .navigation-bar{
-padding-left: 20rem;
+padding-right:33rem;
 padding-top: 1rem;
 padding-bottom: 1rem;
 display: flex;
@@ -30,9 +34,25 @@ flex-wrap: wrap;
     text-decoration: none;
     margin: 0.25rem;
 }
+
+
+
+.page-container{
+
+  max-width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    
+  }
+.form-section{
+  max-width: 580px;
+}
+
 .product-name {
     text-align: center;
-    width: 60%;
+   
     margin: 0 auto;
     padding-top: 5rem;
   }
@@ -57,4 +77,54 @@ flex-wrap: wrap;
   }
   .product-features span {
     color: #5F5F5F;
+  }
+
+
+
+
+  .pizza-info-section {
+    max-width: 580px;
+  }
+
+  .ek-malzemeler-form{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+  
+  }
+
+  .ek-malzemeler {
+   
+   
+    margin-top: 2rem;
+    
+  }
+  
+  .ek-malzemeler-text {
+    color: #292929;
+    text-align: start;
+    padding: 1rem;
+    justify-content: space-evenly;
+  }
+  
+  .ek-malzemeler-secici {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    width: 100%;
+    font-weight: bold;
+    color: grey;
+    font-size: 0.9rem;
+  }
+  
+  .malzeme {
+    padding: 0.5rem;
+    text-align: start;
+    flex-basis: 33.33%;
+    box-sizing: border-box;
+  }
+
+  .siparis-notu {
+  
   }
