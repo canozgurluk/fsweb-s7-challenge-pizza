@@ -30,6 +30,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "http-server": "^14.1.1",
     "prettier": "3.2.5",
-    "vite": "^5.0.8"
+    "vite": "^5.1.6"
   }
 }

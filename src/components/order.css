@@ -1,28 +1,25 @@
 
-header{
-   
-    background-size: cover;
-    margin-top:0;
-    display:flex;
-    flex-direction: column;
-}
-h1{
-text-align: center;
-display: flex;
-flex-direction: column;
-padding: 1rem;
+/*HEADER*/
+.header-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  align-items: center;
+  background-color: #CE2829;
+  height: 207px;
+  max-width: 1920px;
+  }
+.logo{
+
+padding: 50px 0;
 margin:0;
 color: white;
+max-width: 360px;
 }
-.header-container{
-display: flex;
-flex-direction: column;
-max-width: 100%;
-align-items: center;
-background-color: #CE2829;
-}
+
 .navigation-bar{
-padding-right:33rem;
+  font-size: 1.3rem;
+padding-right:28rem;
 padding-top: 1rem;
 padding-bottom: 1rem;
 display: flex;
@@ -46,44 +43,33 @@ flex-wrap: wrap;
   justify-content: center;
     
   }
+  .pizza-info-section {
+    max-width: 600px;
+  }
 .form-section{
   max-width: 580px;
 }
-
+/*Pizza Component */
 .product-name {
     text-align: center;
-   
     margin: 0 auto;
-    padding-top: 5rem;
+   
   }
   .product-name h3 {
     text-align: start;
-  }
-  .product-name b {
-    font-weight: 800;
-    font-size: 1.3rem;
-  }
-  .product-name p {
-    flex-wrap: wrap;
-    color: #5f5f5f;
-    text-align: start;
-  }
-  .product-name span {
-    color: #5f5f5f;
+    font-size: 1.6rem;
+    padding-top: 2rem;
+    padding-bottom: 1.7rem;
   }
   .product-features {
     display: flex;
     justify-content: space-between;
+    padding: 1.5rem 0;
   }
-  .product-features span {
-    color: #5F5F5F;
-  }
-
-
-
-
-  .pizza-info-section {
-    max-width: 580px;
+  .product-features span:first-child {
+    color: black;
+    font-weight: 700;
+    font-size: 1.9rem;
   }
 
   .ek-malzemeler-form{
@@ -91,21 +77,71 @@ flex-wrap: wrap;
       flex-direction: column;
       align-items: center;
       margin-bottom: 3rem;
-  
   }
+.product-name p{
+  font-size:1.4rem;
+  text-align: left;
+  padding-bottom:2rem;
+}
 
-  .ek-malzemeler {
-   
-   
-    margin-top: 2rem;
-    
-  }
-  
-  .ek-malzemeler-text {
+
+
+/*FORM*/
+
+.boyut-hamur-form{
+  display: flex;
+  justify-content: flex-start;
+}
+.pizza-size{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 15rem;
+}
+.pizza-size span {
+font-size: 1.6rem;
+font-weight: 700;
+padding-bottom:0.5rem;
+}
+.pizza-size label{
+padding: 0.5rem 0;
+display: flex;
+justify-content: flex-start;
+}
+
+.pizza-thickness{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.pizza-thickness span{
+font-size: 1.6rem;
+font-weight: 700;
+padding-bottom:1rem;
+justify-content: flex-start;
+display: flex;
+}
+select{
+  font-size: 1.2rem;
+}
+.ek-malzemeler  {
+display: flex;
+flex-direction: column;
+}
+.ek-malzemeler span{
+  display: flex;
+  justify-content: flex-start;
+font-size: 1.6rem;
+font-weight: 700;
+padding-bottom:0.5rem;
+}
+
+.ek-malzemeler-text {
     color: #292929;
     text-align: start;
-    padding: 1rem;
-    justify-content: space-evenly;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+  
   }
   
   .ek-malzemeler-secici {
@@ -115,9 +151,9 @@ flex-wrap: wrap;
     width: 100%;
     font-weight: bold;
     color: grey;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
+
   }
-  
   .malzeme {
     padding: 0.5rem;
     text-align: start;
@@ -125,6 +161,136 @@ flex-wrap: wrap;
     box-sizing: border-box;
   }
 
-  .siparis-notu {
+  .fullname{
+    width: 100%;
   
+    padding: 1rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+
   }
+ 
+ 
+  .siparis-notu {
+    width: 100%;
+    
+    padding: 1rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+
+  }
+  .form-baslik{
+    display: flex;
+    align-content: flex-start;
+    font-size: 1.6rem;
+font-weight: 600;
+padding-bottom:0.5rem;
+  }
+text{
+  padding:0.5rem 0;
+}
+
+
+
+.siparis-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.siparis-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.siparis-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.siparis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.siparis-box .siparis div {
+  text-align: center;
+}
+
+.siparis-box .siparis .card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.siparis-box .siparis .card-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.siparis-box .siparis .card-text:last-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.siparis-box .submit-button {
+  width: 30%;
+}
+
+.order-button {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.button-group .btn {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 10%;
+}
+
+.button-group .btn:first-child {
+  margin-right: 10px;
+}
+
+.button-group .btn:last-child {
+  margin-left: 10px;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
