@@ -1,5 +1,6 @@
+import { useHistory } from "react-router-dom";
 import Pizza from "./Pizza";
-
+import axios from "axios"
 import "./order.css";
 import { useEffect, useState } from "react";
 import {
@@ -32,6 +33,7 @@ const OrderForm = () => {
     "Sarimsak",
     "Kekik",
   ];
+  const history = useHistory()
   const [ekMalzemelerFiyat, setEkMalzemelerFiyat] = useState(0);
   const [isValid, setIsValid] = useState(false);
   const [form, setForm] = useState({
@@ -43,8 +45,7 @@ const OrderForm = () => {
     count: 1,
     price: 85.5,
   });
- 
- 
+
   const handleChange = (event) => {
     let eklenenMalzemeler;
     let { name, value, type, checked } = event.target;
@@ -75,8 +76,8 @@ const OrderForm = () => {
     axios
       .post("https://reqres.in/api/pizza", form)
       .then((response) => {
-        console.log("API Response:", response.data);
-        setForm(initialForm);
+        console.log(response.data);
+        history.push("/success");
       })
       .catch((error) => {
         console.error("API Request Error:", error);
@@ -109,15 +110,13 @@ const OrderForm = () => {
     );
   };
 
-
   const [totalUcret, setTotalUcret] = useState(form.price);
-  const [totalekMalzemelerFiyat, setTotalekMalzemelerFiyat] = useState(ekMalzemelerFiyat)
+  const [totalekMalzemelerFiyat, setTotalekMalzemelerFiyat] =
+    useState(ekMalzemelerFiyat);
   useEffect(() => {
-    setTotalekMalzemelerFiyat(ekMalzemelerFiyat*form.count)
+    setTotalekMalzemelerFiyat(ekMalzemelerFiyat * form.count);
     setTotalUcret((form.price + ekMalzemelerFiyat) * form.count);
   }, [form.count, form.ekMalzeme]);
-
-
 
   return (
     <div className="page-container">
@@ -247,11 +246,17 @@ const OrderForm = () => {
               </Button>
             </ButtonGroup>
             <Card className="siparis-box">
-              <div className="siparis-container"> 
+              <div className="siparis-container">
                 <div className="siparis">
-                  <CardTitle>Siparis Toplami</CardTitle>
-                  <CardText>Seçimler{totalekMalzemelerFiyat}</CardText>
-                  <CardText>Toplam {totalUcret}</CardText>
+                  <CardTitle>Siparis Toplamı</CardTitle>
+                  <CardText>
+                    <a>Seçimler</a>
+                    <a>{totalekMalzemelerFiyat}₺</a>
+                  </CardText>
+                  <CardText>
+                    <a>Toplam</a>
+                    <a>{totalUcret}₺</a>
+                  </CardText>
                 </div>
               </div>
               <div className="submit-button">

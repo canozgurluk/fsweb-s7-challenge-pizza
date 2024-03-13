@@ -8,9 +8,8 @@ const Header = () => {
             
                 <img className="logo" src={logo} alt="logo" />
                 <nav className=" navigation-bar"> 
-                    <Link className=" navigation-bar-link">Anasayfa</Link>
-                    <Link className=" navigation-bar-link">Seçenekler</Link>
-                    <Link className=" navigation-bar-link">Sipariş Oluştur</Link>
+                    <Link to="/" className=" navigation-bar-link">Anasayfa</Link>
+                    <Link to="/order-pizza"className=" navigation-bar-link2">Sipariş Oluştur</Link>
                 </nav>
             
         </header>

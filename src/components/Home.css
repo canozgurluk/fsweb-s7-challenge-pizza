@@ -1,0 +1,37 @@
+.home-container {
+    color: #5f5f5f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    background: url("..\assets\home-banner.png");
+    background-size: cover;
+    background-position: center;
+  }
+ 
+  .logo{
+    padding: 100px 0;
+    margin:0;
+    color: white;
+    max-width: 360px;
+    align-self: center;
+    }
+  
+  .home-container h2 {
+    font-size: 60px;
+    font-weight: 300;
+  }
+  
+  .home-container button {
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: 0;
+    background-color: #fdc913;
+    padding: 1.6rem 5.2rem;
+    border-radius: 2rem;
+    margin: 2rem 0;
+    cursor: pointer;
+  }
+ 

@@ -1,21 +1,23 @@
 
-import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min'
+import { Route, Switch } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
 import OrderForm from './components/OrderForm'
+import Home from './components/Home'
+import Success from './components/Success'
 
 function App(){
  return(
-  <Switch>
+  <Switch>  
     <Route exact path="/">
-    <Header/>
-    <OrderForm/>  
+    <Home/>
     </Route >
     <Route exact path="/order-pizza">
-    
+    <Header/>
+    <OrderForm/>
     </Route>
     <Route exact path="/success">
-            
+      <Success/>    
     </Route>
   </Switch>
  )

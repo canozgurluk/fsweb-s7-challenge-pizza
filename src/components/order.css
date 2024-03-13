@@ -18,8 +18,8 @@ max-width: 360px;
 }
 
 .navigation-bar{
-  font-size: 1.3rem;
-padding-right:28rem;
+font-size: 1.3rem;
+padding-right:34rem;
 padding-top: 1rem;
 padding-bottom: 1rem;
 display: flex;
@@ -30,6 +30,12 @@ flex-wrap: wrap;
     color:white;
     text-decoration: none;
     margin: 0.25rem;
+}
+.navigation-bar-link2 {
+  color:white;
+  text-decoration: none;
+  margin: 0.25rem;
+  font-weight: bold;
 }
 
 
