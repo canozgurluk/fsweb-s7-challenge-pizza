@@ -208,7 +208,7 @@ const OrderForm = () => {
             </div>
           </FormGroup>
 
-          <FormGroup>
+          <FormGroup className="form-text">
             <Label className="form-baslik" for="fullname">
               Ad Soyad
             </Label>
@@ -222,7 +222,7 @@ const OrderForm = () => {
               value={form.fullname}
             />
           </FormGroup>
-          <FormGroup>
+          <FormGroup className="form-text">
             <Label className="form-baslik">Sipariş Notu</Label>
             <Input
               className="siparis-notu"
@@ -246,20 +246,21 @@ const OrderForm = () => {
               </Button>
             </ButtonGroup>
             <Card className="siparis-box">
-              <div className="siparis-container">
+             
                 <div className="siparis">
-                  <CardTitle>Siparis Toplamı</CardTitle>
-                  <CardText>
-                    <a>Seçimler</a>
-                    <a>{totalekMalzemelerFiyat}₺</a>
-                  </CardText>
-                  <CardText>
-                    <a>Toplam</a>
+                  <CardTitle className="siparis-title">Sipariş Toplamı</CardTitle>
+                 
+                    <div>
+                    <a className="siparis-text">Seçimler</a>
+                    <a >{totalekMalzemelerFiyat}₺</a>
+                    </div>
+                    <div>
+                    <a className="siparis-text2">Toplam</a>
                     <a>{totalUcret}₺</a>
-                  </CardText>
-                </div>
+                  </div>
+                
               </div>
-              <div className="submit-button">
+              
                 <Button
                   className="order-button"
                   color="warning"
@@ -267,9 +268,9 @@ const OrderForm = () => {
                   disabled={!isValid}
                   onClick={handleSubmit}
                 >
-                  Sipariş Ver
+                  SİPARİŞ VER
                 </Button>
-              </div>
+             
             </Card>
           </div>
         </Form>
