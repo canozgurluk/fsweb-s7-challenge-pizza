@@ -16,7 +16,7 @@ const Home = () => {
           <img className="logo" src={logo} alt="logo" />
           <h2>KOD ACIKTIRIR</h2>
           <h2>PİZZA, DOYURUR</h2>
-          <button  onClick={handleClick}>
+          <button  onClick={handleClick} data-cy='click'>
             ACIKTIM
           </button>
         </div>

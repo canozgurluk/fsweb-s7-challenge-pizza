@@ -12,7 +12,6 @@ import {
   ButtonGroup,
   Button,
   CardTitle,
-  CardText,
   FormText,
 } from "reactstrap";
 
@@ -45,6 +44,9 @@ const OrderForm = () => {
     count: 1,
     price: 85.5,
   });
+  const [totalUcret, setTotalUcret] = useState(form.price);
+  const [totalekMalzemelerFiyat, setTotalekMalzemelerFiyat] =
+    useState(ekMalzemelerFiyat)
 
   const handleChange = (event) => {
     let eklenenMalzemeler;
@@ -110,9 +112,7 @@ const OrderForm = () => {
     );
   };
 
-  const [totalUcret, setTotalUcret] = useState(form.price);
-  const [totalekMalzemelerFiyat, setTotalekMalzemelerFiyat] =
-    useState(ekMalzemelerFiyat);
+  ;
   useEffect(() => {
     setTotalekMalzemelerFiyat(ekMalzemelerFiyat * form.count);
     setTotalUcret((form.price + ekMalzemelerFiyat) * form.count);
@@ -135,6 +135,7 @@ const OrderForm = () => {
                   id="kücük"
                   name="size"
                   value="kücük"
+                  data-cy="size-kücük"
                   onChange={handleChange}
                   checked={form.size == "kücük"}
                 />
@@ -147,6 +148,7 @@ const OrderForm = () => {
                   id="orta"
                   name="size"
                   value="orta"
+                  data-cy="size-orta"
                   onChange={handleChange}
                   checked={form.size == "orta"}
                 />
@@ -159,8 +161,10 @@ const OrderForm = () => {
                   id="büyük"
                   name="size"
                   value="büyük"
+                  data-cy="size-büyük"
                   onChange={handleChange}
                   checked={form.size == "büyük"}
+                  
                 />
                 Büyük
               </Label>
@@ -173,6 +177,7 @@ const OrderForm = () => {
                 name="thickness"
                 id="thickness"
                 value={form.thickness}
+                data-cy="thickness"
                 onChange={handleChange}
               >
                 <option>Hamur Kalınlığı Seç</option>
@@ -200,6 +205,7 @@ const OrderForm = () => {
                       key={i}
                       onChange={handleChange}
                       checked={form.ekMalzeme.includes(material)}
+                      data-cy={`checkbox-box${i}`}
                     />
                     <label htmlFor={`ekMalzeme-${i}`}> {material}</label>
                   </div>
@@ -218,6 +224,7 @@ const OrderForm = () => {
               name="fullname"
               placeholder="İsminizi giriniz"
               type="text"
+              data-cy="fullname"
               onChange={handleChange}
               value={form.fullname}
             />
@@ -229,6 +236,7 @@ const OrderForm = () => {
               type="text"
               name="siparisNotu"
               id="siparisNotu"
+              data-cy="text"
               placeholder="Eklemek istediğin not var mı?"
               onChange={handleChange}
               value={form.siparisNotu}
@@ -267,6 +275,7 @@ const OrderForm = () => {
                   type="submit"
                   disabled={!isValid}
                   onClick={handleSubmit}
+                  data-cy='order-button'
                 >
                   SİPARİŞ VER
                 </Button>
